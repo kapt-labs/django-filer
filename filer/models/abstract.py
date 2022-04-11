@@ -5,6 +5,7 @@ from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
 
 from easy_thumbnails.VIL import Image as VILImage
+from image_cropping import ImageRatioField
 
 from .. import settings as filer_settings
 from ..utils.compatibility import PILImage
@@ -58,6 +59,10 @@ class BaseImage(File):
         max_length=64,
         blank=True,
         default='',
+    )
+
+    cropping = ImageRatioField(
+        "file", "100x100", free_crop=True, allow_fullsize=True
     )
 
     file_ptr = models.OneToOneField(

@@ -10,6 +10,7 @@ REQUIREMENTS = [
     'django-polymorphic',
     'easy-thumbnails[svg]',
     'Unidecode>=0.04,<1.2',
+    'django-image-cropping>=1.7,<2',
 ]
 
 
