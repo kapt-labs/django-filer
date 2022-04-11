@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import gettext as _
 from django.utils.translation import gettext_lazy
+from image_cropping.admin import ImageCroppingMixin
 
 from ..settings import FILER_IMAGE_MODEL
 from ..thumbnail_processors import normalize_subject_location
@@ -89,7 +90,7 @@ class ImageAdminForm(forms.ModelForm):
         )
 
 
-class ImageAdmin(FileAdmin):
+class ImageAdmin(ImageCroppingMixin, FileAdmin):
     change_form_template = 'admin/filer/image/change_form.html'
     form = ImageAdminForm
 
@@ -102,6 +103,10 @@ else:
 ImageAdmin.fieldsets = ImageAdmin.build_fieldsets(
     extra_main_fields=extra_main_fields,
     extra_fieldsets=(
+        (_('Cropping'), {
+            'fields': ('cropping',),
+            'classes': ('collapse',),
+        }),
         (_('Subject location'), {
             'fields': ('subject_location',),
             'classes': ('collapse',),
