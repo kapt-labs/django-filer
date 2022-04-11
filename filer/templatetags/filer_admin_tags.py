@@ -84,7 +84,7 @@ def file_icon_context(file, detail, width, height):
             context['sidebar_image_ratio'] = file.width / 210
             opts = {'size': (width, height), 'upscale': True}
         else:
-            opts = {'size': (width, height), 'crop': True}
+            opts = {'size': (width, height), 'crop': True, 'box': file.cropping}
         icon_url = thumbnailer.get_thumbnail(opts).url
         context['alt_text'] = file.default_alt_text
         if mime_subtype != 'svg+xml':
