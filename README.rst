@@ -2,15 +2,23 @@
 Django Filer
 ============
 
+***********
+Branch v2.x
+***********
+
+This branch includes:
+
+- feature/cropping: add cropping informations on pictures
+
 |pypi| |build| |coverage|
 
 **django Filer** is a file management application for django that makes
 handling of files and images a breeze.
 
-.. note:: 
-        
+.. note::
+
         This project is endorsed by the `django CMS Association <https://www.django-cms.org/en/about-us/>`_.
-        That means that it is officially accepted by the dCA as being in line with our roadmap vision and development/plugin policy. 
+        That means that it is officially accepted by the dCA as being in line with our roadmap vision and development/plugin policy.
         Join us on `Slack <https://www.django-cms.org/slack/>`_.
 
 .. We're using absolute image url below, because relative paths won't work on
@@ -31,8 +39,8 @@ Contribute to this project and win rewards
 
 Because this is a an open-source project, we welcome everyone to
 `get involved in the project <https://www.django-cms.org/en/contribute/>`_ and
-`receive a reward <https://www.django-cms.org/en/bounty-program/>`_ for their contribution. 
-Become part of a fantastic community and help us make django CMS the best CMS in the world.   
+`receive a reward <https://www.django-cms.org/en/bounty-program/>`_ for their contribution.
+Become part of a fantastic community and help us make django CMS the best CMS in the world.
 
 We'll be delighted to receive your
 feedback in the form of issues and pull requests. Before submitting your
