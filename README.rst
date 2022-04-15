@@ -2,6 +2,14 @@
 Django Filer
 ============
 
+********************
+Branch release/2.2.x
+********************
+
+This branch includes:
+
+- feature/cropping: add cropping informations on pictures
+
 |pypi| |build| |python| |django| |coverage|
 
 **django Filer** is a file management application for django that makes
